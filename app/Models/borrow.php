@@ -9,5 +9,19 @@ class borrow extends Model
 {
     use HasFactory;
 
-    protected $fillable = [ ];
-}
+    protected $fillable = [ 
+        'user_id',
+        'book_id',
+        'date_start',
+        'date_end'
+    ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function Book(){
+        return $this->belongsTo(Book::class);
+    }
+
+    }
