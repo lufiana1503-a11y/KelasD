@@ -11,9 +11,5 @@ class Category extends Model
 
     protected $fillabel = [
         'name'
-    ]
-
-    public function book(){
-        return $this->hasMany(Book::class);
-    }
+    ];
 }
